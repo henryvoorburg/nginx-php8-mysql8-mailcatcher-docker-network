@@ -14,6 +14,3 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 RUN curl -sS https://get.symfony.com/cli/installer | bash
 RUN mv /root/.symfony/bin/symfony /usr/local/bin/symfony
-
-RUN git clone https://github.com/henryvoorburg/hvnl-sf54.git /var/www/project
-RUN composer install
