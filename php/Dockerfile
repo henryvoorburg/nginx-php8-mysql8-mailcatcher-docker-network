@@ -24,3 +24,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 RUN echo 'deb [trusted=yes] https://repo.symfony.com/apt/ /' | tee /etc/apt/sources.list.d/symfony-cli.list
 RUN apt update
 RUN apt install symfony-cli
+
+# Tell Git who you are
+RUN git config --global user.email "you@example.com"
+RUN git config --global user.name "Your Name"
