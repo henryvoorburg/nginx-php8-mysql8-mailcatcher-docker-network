@@ -48,6 +48,7 @@ services:
         restart: always # always restart unless stopped manually
         environment:
             MYSQL_ROOT_PASSWORD: secret
+            MYSQL_USER: user
             MYSQL_PASSWORD: secret
         networks:
             - nginx-php8-mysql8-mailcatcher
